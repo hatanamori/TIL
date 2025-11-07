@@ -29,12 +29,16 @@ ssh-keygen
 ~~~
 ssh-keygen -t [algorithm]
 ~~~
-アルゴリズムとして利用できるのは以下
+アルゴリズムの一例
 - RSA(デフォルト)
   - `RSA1`のようにバージョンを指定することも可能
-- ECDSA<!--CHECK: ECDSA使えるか確認-->
+  - 将来的に破られることがNISTから言われているため、別の暗号を使用したほうがいい
 - ED25519
-<!--TODO: 各暗号の特徴-->
+  - RSAよりこっちのほうが推奨されている
+
+ssh接続では鍵をユーザ認証で使用しているため、ECDSAなどの署名方式も使用可能。
+セッションの際は共通鍵で通信を暗号化する。
+<!--telnetとの違いは、通信路を暗号化しているかどうか。ユーザ認証の暗号化は付随的なものらしい-->
 
 ### 鍵の長さを指定`-b`
 ~~~
@@ -73,3 +77,4 @@ ssh-copy-id -i [path/to/key.pub] [username]@[hostname]
 - [SSH鍵の作成方法と -t -C オプションのすすめ](https://qiita.com/ryemug1/items/bacf6e6583656f3cf0d1)
 - [【SSH】ssh-keygenでファイル名を指定して作成（などアレコレ）](https://qiita.com/c_tomioka/items/379a9288d44634ca1daa)
 - [sshの秘密鍵パスフレーズの確認と変更](https://qiita.com/syukan723/items/e654953c89aab6f847a4)
+- [RSA暗号](https://www.rsa.com/ja/company/rsa-cryptography/)
