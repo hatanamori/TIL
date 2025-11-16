@@ -40,9 +40,10 @@ PDFなどは追跡すると重くなるので`.gitignore`に入れておく
 インストールは[この記事](https://qiita.com/mochinoki/items/c0809d75ba9228cb54b6)を参考にした。
 
 <details>
-    <summary>個人的に行ったこと<summary>
-    `C:\rclone`を作成し、そこに.exeファイルを移動
-    環境変数にパスを追加
+<summary>個人的に行ったこと<summary>
+
+`C:\rclone`を作成し、そこに.exeファイルを移動
+環境変数にパスを追加
 </details>
 
 Windowsでは以下のコマンドで設定を開始。
