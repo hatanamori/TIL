@@ -41,7 +41,6 @@ PDFなどは追跡すると重くなるので`.gitignore`に入れておく
 
 <details>
     <summary>個人的に行ったこと<summary>
-
     `C:\rclone`を作成し、そこに.exeファイルを移動
     環境変数にパスを追加
 </details>
